@@ -1,2 +1,84 @@
-body { font-family: Arial, sans-serif; }
-.timeline h5 { font-weight: bold; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #FFF5F2;
+  color: #064232;
+}
+
+/* Navbar & Footer: deep green */
+.navbar,
+footer, #footer, .bg-dark {
+  background-color: #064232 !important;
+  color: #fff !important;
+}
+
+/* Navbar brand: accent rose */
+.navbar-brand {
+  color: #f5babb !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.navbar-brand:hover {
+  color: #568f87 !important;
+}
+
+/* Nav links: white by default, accent rose on hover/active */
+.nav-link {
+  color: #fff !important;
+  transition: color 0.2s;
+}
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+  color: #f5babb !important;
+}
+
+/* Buttons: muted teal */
+.btn-primary, .btn-primary:focus, .btn-primary:hover {
+  background-color: #568f87 !important;
+  border-color: #568f87 !important;
+  color: #fff !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Section background: almost white */
+.bg-light {
+  background-color: #FFF5F2 !important;
+}
+
+/* Chat box border: accent rose, subtle shadow */
+#chat-box {
+  border-color: #f5babb !important;
+  box-shadow: 0 2px 8px rgba(86,143,135,0.08);
+}
+
+/* Footer text alignment and padding */
+footer, #footer {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/* Optional: rounded corners for cards and chat box */
+.card, #chat-box {
+  border-radius: 1rem !important;
+}
+
+.lang-toggle .lang-option {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-toggle .lang-option.active,
+.lang-toggle .lang-option:focus {
+  background: #f5babb;
+  color: #064232 !important;
+}
+.lang-toggle .lang-option:hover {
+  background: #568f87;
+  color: #fff !important;
+}
+nav .lang-toggle .lang-option.active {
+  background: #f5babb !important;
+  color: #064232 !important;
+}
