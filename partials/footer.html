@@ -1,0 +1,9 @@
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  &copy; <span id="year"></span> Zoya. All rights reserved.
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("year").textContent = new Date().getFullYear();
+  });
+</script>

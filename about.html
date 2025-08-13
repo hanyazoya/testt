@@ -4,54 +4,35 @@
   <meta charset="UTF-8">
   <title>About - Zoya</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/cosmo/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/favicon.ico">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Zoya</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
-<section class="py-5 bg-light">
+<div id="header"></div>
+
+<section class="py-5 text-center bg-light">
   <div class="container">
-    <h2 class="mb-4">About Me</h2>
-    <ul class="timeline list-unstyled">
-      <li class="mb-4">
-        <h5>2023 - Present</h5>
-        <p>Software Developer at XYZ Company</p>
-      </li>
-      <li class="mb-4">
-        <h5>2021 - 2023</h5>
-        <p>Bachelor's Degree in Computer Science</p>
-      </li>
-      <li class="mb-4">
-        <h5>2019</h5>
-        <p>Internship at ABC Organization</p>
-      </li>
-    </ul>
+    <h1 class="display-4" id="title-text">About Me</h1>
+    <p class="lead" id="subtitle-text">This is the about page content.</p>
+    <!-- Add more about content here -->
   </div>
 </section>
 
-<footer class="bg-dark text-white text-center py-3 mt-5">
-  &copy; 2025 Zoya. All rights reserved.
-</footer>
-
+<div id="footer"></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(function() {
+    $("#header").load("partials/header.html");
+    $("#footer").load("partials/footer.html", function() {
+      document.getElementById("year").textContent = new Date().getFullYear();
+    });
+  });
+</script>
+<script src="assets/js/content.js"></script>
 <script src="assets/js/script.js"></script>
+
 </body>
 </html>
