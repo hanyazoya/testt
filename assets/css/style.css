@@ -21,13 +21,16 @@ footer, #footer, .bg-dark {
   color: #568f87 !important;
 }
 
-/* Nav links: white by default, accent rose on hover/active */
+/* Nav links: muted teal by default, accent rose on hover/active */
 .nav-link {
-  color: #fff !important;
+  color: #568f87 !important;         /* muted teal */
   transition: color 0.2s;
 }
-.nav-link.active, .nav-link:focus, .nav-link:hover {
-  color: #f5babb !important;
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+  color: #f5babb !important;         /* accent rose */
+  background: transparent !important;
 }
 
 /* Buttons: muted teal */
@@ -52,8 +55,9 @@ footer, #footer, .bg-dark {
 
 /* Footer text alignment and padding */
 footer, #footer {
-  padding: 1.5rem 0;
+  padding: 0;
   text-align: center;
+  line-height: 80px;
 }
 
 /* Optional: rounded corners for cards and chat box */
@@ -182,4 +186,87 @@ nav .lang-toggle .lang-option.active {
 }
 .italic {
   font-style: italic;
+}
+
+
+/* Tabs: muted teal active, rose hover */
+.nav-tabs .nav-link {
+  color: #064232;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus {
+  color: #fff;
+  background: #568f87;
+  border-color: #568f87;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.nav-tabs .nav-link:hover:not(.active) {
+  color: #fff;
+  background: #f5babb;
+  border-color: #f5babb;
+}
+
+/* Search and sort controls */
+#search-input, #sort-select {
+  border: 1.5px solid #568f87;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #064232;
+}
+#search-input:focus, #sort-select:focus {
+  border-color: #f5babb;
+  box-shadow: 0 0 0 0.2rem rgba(245,186,187,0.15);
+}
+
+/* Project cards */
+#projects-container .card {
+  border: 1.5px solid #568f87;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(86,143,135,0.08);
+  margin-bottom: 2rem;
+}
+#projects-container .card-title {
+  color: #064232;
+  font-weight: bold;
+}
+#projects-container .card-text {
+  color: #568f87;
+}
+#projects-container .btn-primary {
+  background-color: #f5babb !important;
+  border-color: #f5babb !important;
+  color: #064232 !important;
+  font-weight: 500;
+}
+#projects-container .btn-primary:hover {
+  background-color: #568f87 !important;
+  border-color: #568f87 !important;
+  color: #fff !important;
+}
+/* Make keywords/tags use deep green background and accent rose text */
+.keyword, .tag, .badge {
+  background-color: #064232 !important;
+  border-radius: 0.1rem;
+  /*color: #f5babb !important;
+  padding: 0.2em 0.7em;
+  font-size: 0.95em;
+  font-weight: 500;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;*/
+  display: inline-block;
+  border: none;
+}
+
+#projects-container .card img,
+.card img {
+  border-radius: 1rem 1rem 0 0 !important; /* top corners rounded, bottom corners square */
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }

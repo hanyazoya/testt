@@ -31,6 +31,7 @@ function applyLanguage(lang) {
   if ($("#timeline-content").length) {
     renderTimeline(lang);
   }
+
 }
 
 $(function() {
@@ -76,6 +77,7 @@ $(document).on("click", ".lang-option", function(e) {
   const lang = $(this).data("lang");
   localStorage.setItem("selectedLang", lang);
   applyLanguage(lang);
+  $(document).trigger("languageChanged", [lang]);
 });
 
 // Timeline hover tooltip

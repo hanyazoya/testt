@@ -12,11 +12,29 @@
 
 <div id="header"></div>
 
-<section class="py-5 text-center bg-light">
+<section class="py-5 bg-light">
   <div class="container">
-    <h1 class="display-4" id="title-text">My Projects</h1>
-    <p class="lead" id="subtitle-text">Here are some of my projects.</p>
-    <!-- Add your project cards here -->
+    <h1 class="display-4 text-center" id="title-text">My Projects</h1>
+    <p class="lead text-center" id="subtitle-text">Here are some of my projects.</p>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="project-tabs"></ul>
+
+    <!-- Search and sort controls -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input type="text" id="search-input" class="form-control" placeholder="Search projects...">
+      </div>
+      <div class="col-md-6">
+        <select id="sort-select" class="form-select">
+          <option value="desc">Newest first</option>
+          <option value="asc">Oldest first</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="row" id="projects-container"></div>
   </div>
 </section>
 
@@ -32,8 +50,11 @@
     });
   });
 </script>
+
 <script src="assets/js/content.js"></script>
 <script src="assets/js/script.js"></script>
+<script src="assets/js/projects-render.js"></script>
+
 
 </body>
 </html>
